@@ -1,3 +1,8 @@
+import argparse
+import csv
+from curses import wrapper
+import sys
+import time
 from typing import List, Generator, Tuple
 
 
@@ -58,3 +63,36 @@ def game_of_life(seed: List[List[int]]
         yield current
         next: List[List[int]] = play_round(current)
         current = next
+
+
+def run_game(stdscr, game):
+    while True:
+        try:
+            state = next(game)
+            repr = '\n'.join([' '.join([str(sq) for sq in row])
+                              for row in state])
+            stdscr.addstr(0, 0, repr)
+            stdscr.refresh()
+            time.sleep(0.8)
+        except KeyboardInterrupt:
+            break
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-f', '--file',
+                        action='store',
+                        metavar='',
+                        help='file to read game seed from')
+    args = parser.parse_args()
+
+    if args.file:
+        with open(args.file, mode='r') as seed_file:
+            csv_reader = csv.reader(seed_file, delimiter=',')
+            seed = [[int(sq) for sq in row] for row in csv_reader]
+            g = game_of_life(seed)
+            wrapper(run_game, g)
+
+
+if __name__ == "__main__":
+    main()
