@@ -1,7 +1,7 @@
 # Game of Life
 ---
 
-An implementation of Conway's Game of Life in Python.
+An implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) for the command-line in Python.
 
 Written on a whim, to have fun and challenge myself to work out on my own
 how to implement the algorithm for the game; to try out generators, nested
@@ -44,22 +44,25 @@ or:
   - [ ] add color to make live cells stand out
 - [x] automate (game should run on its own after initial seed is provided)
 - [ ] allow saving output to a file
-- [ ] allow reading input from an image, other formats, etc.
 - [ ] allow user to control number of iterations to run through
 - [ ] simplify input, allow easy input of larger, more complex seeds
+  - [ ] allow reading input from an image, other formats, etc.
 
 ---
 ### REFERENCE:
 - [Conway's Game of Life - Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
--
-- [Reading and Writing CSV Files in Python – Real Python](https://realpython.com/python-csv/)
-- [csv — CSV File Reading and Writing — Python 3.8.1 documentation](https://docs.python.org/3/library/csv.html)
-- [Argparse Tutorial — Python 3.8.1 documentation](https://docs.python.org/3/howto/argparse.html#id1)
-- [argparse — Parser for command-line options, arguments and sub-commands — Python 3.8.1 documentation](https://docs.python.org/3/library/argparse.html#const)
-- [Curses Programming with Python — Python 3.8.1 documentation](https://docs.python.org/3/howto/curses.html)
-- [curses — Terminal handling for character-cell displays — Python 3.8.1 documentation](https://docs.python.org/3/library/curses.html#curses.wrapper)
 
-- [python - Output to the same line overwriting previous - Stack Overflow](https://stackoverflow.com/questions/26584003/output-to-the-same-line-overwriting-previous/26584483)
-- [printing a two dimensional array in python - Stack Overflow](https://stackoverflow.com/questions/17870612/printing-a-two-dimensional-array-in-python)
-- [How to create a number of empty nested lists in python - Stack Overflow](https://stackoverflow.com/questions/19249201/how-to-create-a-number-of-empty-nested-lists-in-python)
-- [python - Don't show long options twice in print_help() from argparse - Stack Overflow](https://stackoverflow.com/questions/18275023/dont-show-long-options-twice-in-print-help-from-argparse)
+- Working with CSV files in Python:
+  - [Reading and Writing CSV Files in Python – Real Python](https://realpython.com/python-csv/)
+  - [csv — CSV File Reading and Writing — Python 3.8.1 documentation](https://docs.python.org/3/library/csv.html)
+
+- Argparse:
+  - [Argparse Tutorial — Python 3.8.1 documentation](https://docs.python.org/3/howto/argparse.html#id1)
+  - [argparse — Parser for command-line options, arguments and sub-commands — Python 3.8.1 documentation](https://docs.python.org/3/library/argparse.html#const)
+  - [python - Don't show long options twice in print_help() from argparse - Stack Overflow](https://stackoverflow.com/questions/18275023/dont-show-long-options-twice-in-print-help-from-argparse)
+
+- Formatting terminal output:
+  - [Curses Programming with Python — Python 3.8.1 documentation](https://docs.python.org/3/howto/curses.html)
+  - [curses — Terminal handling for character-cell displays — Python 3.8.1 documentation](https://docs.python.org/3/library/curses.html#curses.wrapper)
+  - [python - Output to the same line overwriting previous - Stack Overflow](https://stackoverflow.com/questions/26584003/output-to-the-same-line-overwriting-previous/26584483)
+  - [printing a two dimensional array in python - Stack Overflow](https://stackoverflow.com/questions/17870612/printing-a-two-dimensional-array-in-python)
