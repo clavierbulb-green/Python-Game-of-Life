@@ -1,5 +1,6 @@
 import argparse
 import csv
+import curses
 from curses import wrapper
 import sys
 import time
@@ -65,7 +66,7 @@ def game_of_life(seed: List[List[int]]
         current = next
 
 
-def run_game(stdscr, game):
+def run_game(stdscr, game) -> None:
     while True:
         try:
             state = next(game)
@@ -80,18 +81,18 @@ def run_game(stdscr, game):
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument('-f', '--file',
+    parser.add_argument('file',
                         action='store',
-                        metavar='',
+                        # metavar='',
                         help='file to read game seed from')
     args = parser.parse_args()
 
-    if args.file:
-        with open(args.file, mode='r') as seed_file:
-            csv_reader = csv.reader(seed_file, delimiter=',')
-            seed = [[int(sq) for sq in row] for row in csv_reader]
-            g = game_of_life(seed)
-            wrapper(run_game, g)
+    # if args.file:
+    with open(args.file, mode='r') as seed_file:
+        csv_reader = csv.reader(seed_file, delimiter=',')
+        seed = [[int(sq) for sq in row] for row in csv_reader]
+        g = game_of_life(seed)
+        wrapper(run_game, g)
 
 
 if __name__ == "__main__":

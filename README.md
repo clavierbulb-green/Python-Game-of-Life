@@ -1,6 +1,8 @@
 # Game of Life
 ---
 
+[![asciicast](https://asciinema.org/a/7DTuqRXYQXw4qrbAQ20vp08MW.svg)](https://asciinema.org/a/7DTuqRXYQXw4qrbAQ20vp08MW)
+
 An implementation of [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) for the command-line in Python.
 
 Written on a whim, to have fun and challenge myself to work out on my own
@@ -8,7 +10,7 @@ how to implement the algorithm for the game; to try out generators, nested
 functions, type annotation, etc. in Python; and to try to make a fun little
 command-line app.
 
-The program can read its input from a .csv file containing the starting seed
+The reads its input from a .csv file containing the starting seed
 configuration. A value of 1 indicates a 'live' square,whereas a value of 0
 indicates a 'dead' square. The program then prints the state of the board as
 its cells 'evolve'.
